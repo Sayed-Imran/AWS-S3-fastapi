@@ -29,13 +29,6 @@ except:
     sys.exit(1)
 
 
-class DBConf:
-    class MongoDB:
-        uri = config.get("MONGO_DB", "uri")
-        if not uri:
-            print("Error, ENV variable Mongo URI not set")
-            sys.exit(1)
-
 class Credentials:
     class AccessKey:
         akey = config.get("ACCESS_KEY",'akey')
